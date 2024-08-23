@@ -21,3 +21,6 @@
 5. Visit `localhost/final/main.html`, there are two black buttons, they direct you to `WekaDT.html` and `KNNCA.html` respectively
     - for `WekaDT.html`, input all values at the left side and hit 送出, the result will be shown on the right side and the results will be added into the `record` table 
     - for `KNNCA.html`, input all values at the left side and hit 計算, 交叉分析 and KNN respectively, the result will be shown on the right side and the results will be added into the `recordk` table
+
+# Dataset
+[日空氣品質指標(AQI)](https://data.gov.tw/dataset/40507) (2022-11-22)
