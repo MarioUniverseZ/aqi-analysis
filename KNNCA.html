@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/KNNCA.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/KNNCA.js"></script>
+	<title>統資四甲王子睿 Kmeans、KNN與交叉分析</title>
+</head>
+<body>
+	<div id = "mainleft">
+		<div id="cluster">
+			<a href="cluster.html">Kmeans分群圖</a>
+		</div>
+		<div id="cross">
+			<a href="cross.html">交叉分析圖</a>
+		</div>
+		<p class="subtitle">變數輸入</p>
+		<hr>
+		<div>
+			<table>
+				<tr>
+					<td>監測日期:</td>
+					<td>
+						<select id="mon">
+							<option value="2022-11-10">2022-11-10</option>
+							<option value="2022-11-11">2022-11-11</option>
+							<option value="2022-11-12">2022-11-12</option>
+							<option value="2022-11-13">2022-11-13</option>
+							<option value="2022-11-14">2022-11-14</option>
+							<option value="2022-11-15">2022-11-15</option>
+							<option value="2022-11-16">2022-11-16</option>
+							<option value="2022-11-17">2022-11-17</option>
+							<option value="2022-11-18">2022-11-18</option>
+							<option value="2022-11-19">2022-11-19</option>
+							<option value="2022-11-20">2022-11-20</option>
+							<option value="2022-11-21">2022-11-21</option>
+							<option value="2022-11-22">2022-11-22</option>
+						</select>
+					</td>
+					<td>二氧化硫副指標:</td>
+					<td>
+						<input type="text" id="so2">
+					</td>
+				</tr>
+				<tr>
+					<td>一氧化碳副指標:</td>
+					<td>
+						<input type="text" id="co1">
+					</td>
+					<td>懸浮微粒副指標:</td>
+					<td>
+						<select id="pm10">
+							<option id="1~22">1~22</option>
+							<option id="23~44">23~44</option>
+							<option id="45~65">45~65</option>
+							<option id="66~87">66~87</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>二氧化氮副指標:</td>
+					<td>
+						<input type="text" id="no2">
+					</td>
+					<td>臭氧８小時副指標:</td>
+					<td>
+						<input type="text" id="o38">
+					</td>
+				</tr>
+				<tr>
+					<td>細懸浮微粒副指標:</td>
+					<td>
+						<select id="pm25">
+							<option id="0~33">0~33</option>
+							<option id="34~67">34~67</option>
+							<option id="68~101">68~101</option>
+							<option id="102~135">102~135</option>
+						</select>
+					</td>
+			</table>
+		</div>
+		
+	</div>
+	<div id = "mainright">
+		<p class="subtitle">kmeans</p>
+		<hr>
+		<table>
+			<tr>
+				<td>資料群集</td>
+				<td id="nowcluster"></td>
+				<td>AQI類別</td>
+				<td id="nowkmeanspep"></td>
+			</tr>
+		</table>
+		<br>
+		<p class="subtitle">knn</p>
+		<hr>
+		<table>
+			<tr>
+				<td>knn id</td>
+				<td id="nowknnid"></td>
+				<td>knn pep</td>
+				<td id="nowknnpep"></td>
+			</tr>
+		</table>
+		<br>
+		<p class="subtitle">交叉分析</p>
+		<hr>
+		<table>
+			<tr>
+				<td>分析結果</td>
+				<td id="nowCAfinal"></td>
+			</tr>
+		</table>
+		<br>
+	</div>
+	<div id = "maindown">
+		<table>
+			<tr>
+				<td>
+					<button id = "Send" onclick="sendresult()">送出</button>
+				</td>
+				<td>
+					<button id = "Count" onclick="kmeans()">計算</button>
+				</td>
+				<td>
+					<button id = "XrsAn" onclick="crossanalysis()">交叉分析</button>
+				</td>
+				<td>
+					<button id = "KnnFn" onclick="knn()">KNN</button>
+				</td>
+				<td>
+					<button id = "Clear" onclick="clearinput()">清除資料</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

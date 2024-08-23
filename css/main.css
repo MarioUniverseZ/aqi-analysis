@@ -1,0 +1,48 @@
+body{
+	color: #000069;
+	background-image: url("../Itadaki BG.jpg");
+	background-color: rgba(255, 255, 255, 0.8);
+	background-blend-mode: lighten;
+	background-size: cover;
+}
+
+h1{
+	font-size: 50px;
+	text-align: center;
+}
+
+h2{
+	font-size: 25px;
+	text-align: center;
+}
+
+#btnplace{
+	text-align: center;
+}
+
+#WekaDTP{
+	text-align: left;
+	font-size: 26px;
+}
+
+.btn{
+	font-size: 20px;
+	color: white; /*文字顏色*/
+	background-color: black;
+}
+
+.videobtn{
+	height: 128px;
+	width: 128px;
+	background-image: url("../27185.jpg");
+	background-size: cover;
+	border-radius: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+#v{
+	margin: auto;
+	width: 37.5%;
+	padding-top: 80px;
+}

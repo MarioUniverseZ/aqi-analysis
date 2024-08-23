@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/WekaDT.css">
+	<script type="text/javascript" src="js/WekaDT.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>統資四甲王子睿 決策樹</title>
+</head>
+<body>
+	<div id="choicetable">
+		<table>
+			<tr> <!--表格的列-->
+				<td> <!--表格的欄-->
+					<div class="theform">
+						<h5>監測日期:&nbsp&nbsp&nbsp</h5>
+						<select id="mon">
+							<option value="2022-11-10">2022-11-10</option>
+							<option value="2022-11-11">2022-11-11</option>
+							<option value="2022-11-12">2022-11-12</option>
+							<option value="2022-11-13">2022-11-13</option>
+							<option value="2022-11-14">2022-11-14</option>
+							<option value="2022-11-15">2022-11-15</option>
+							<option value="2022-11-16">2022-11-16</option>
+							<option value="2022-11-17">2022-11-17</option>
+							<option value="2022-11-18">2022-11-18</option>
+							<option value="2022-11-19">2022-11-19</option>
+							<option value="2022-11-20">2022-11-20</option>
+							<option value="2022-11-21">2022-11-21</option>
+							<option value="2022-11-22">2022-11-22</option>
+						</select>
+					</div>
+				</td>
+				<td>
+					<div class="theform">
+						<h5>二氧化硫副指標:&nbsp&nbsp&nbsp</h5>
+						<input type="text" id="so2">
+					</div>
+				</td>
+			</tr>
+			<tr> 
+				<td> 
+					<div class="theform">
+						<h5>一氧化碳副指標:&nbsp&nbsp&nbsp</h5>
+						<input type="text" id="co1">
+					</div>
+				</td>
+				<td>
+					<div class="theform">
+						<h5>懸浮微粒副指標:&nbsp&nbsp&nbsp</h5>
+						<select id="pm10">
+							<option id="1~22">1~22</option>
+							<option id="23~44">23~44</option>
+							<option id="45~65">45~65</option>
+							<option id="66~87">66~87</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr> 
+				<td> 
+					<div class="theform">
+						<h5>二氧化氮副指標:&nbsp&nbsp&nbsp</h5>
+						<input type="text" id="no2">
+					</div>
+				</td>
+				<td>
+					<div class="theform">
+						<h5>臭氧８小時副指標:&nbsp&nbsp&nbsp</h5>
+						<input type="text" id="o38">
+					</div>
+				</td>
+			</tr>
+			<tr> 
+				<td> 
+					<div class="theform">
+						<h5>細懸浮微粒副指標:&nbsp&nbsp&nbsp</h5>
+						<select id="pm25">
+							<option id="0~33">0~33</option>
+							<option id="34~67">34~67</option>
+							<option id="68~101">68~101</option>
+							<option id="102~135">102~135</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="confirm">
+		<table>
+			<tr>
+				<td>
+					<button id="confirmbtn" onclick="tree()">確認並送出</button>
+				</td>
+				<td id="aqi">
+					空氣品質指標
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

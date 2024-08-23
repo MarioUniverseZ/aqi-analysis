@@ -1,0 +1,9 @@
+body{
+	background-image: url("../tree.jpg");
+	background-size: cover;
+}
+
+#goback{
+	text-align: right;
+	font-size: 26px;
+}
